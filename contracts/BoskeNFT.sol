@@ -1,4 +1,4 @@
-// contracts/DungeonsAndDragonsCharacter.sol
+// contracts/BoskeNFT.sol
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.6.6;
 
@@ -7,7 +7,7 @@ import "@chainlink/contracts/src/v0.6/VRFConsumerBase.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
 
-contract DungeonsAndDragonsCharacter is ERC721, VRFConsumerBase, Ownable {
+contract BoskeNFT is ERC721, VRFConsumerBase, Ownable {
     using SafeMath for uint256;
     using Strings for string;
 
@@ -47,7 +47,7 @@ contract DungeonsAndDragonsCharacter is ERC721, VRFConsumerBase, Ownable {
     constructor(address _VRFCoordinator, address _LinkToken, bytes32 _keyhash)
         public
         VRFConsumerBase(_VRFCoordinator, _LinkToken)
-        ERC721("DungeonsAndDragonsCharacter", "D&D")
+        ERC721("BoskeNFT", "BOSKE")
     {   
         VRFCoordinator = _VRFCoordinator;
         LinkToken = _LinkToken;
@@ -55,7 +55,7 @@ contract DungeonsAndDragonsCharacter is ERC721, VRFConsumerBase, Ownable {
         fee = 0.1 * 10**18; // 0.1 LINK
     }
 
-    function requestNewRandomCharacter(
+    function requestNewRandomBoskeNFT(
         uint256 userProvidedSeed,
         string memory name
     ) public returns (bytes32) {

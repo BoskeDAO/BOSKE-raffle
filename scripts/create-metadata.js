@@ -1,4 +1,4 @@
-const DungeonsAndDragons = artifacts.require('DungeonsAndDragonsCharacter')
+const BoskeNFT = artifacts.require('BoskeNFT')
 const fs = require('fs')
 
 const metadataTemple = {
@@ -37,13 +37,13 @@ const metadataTemple = {
     ]
 }
 module.exports = async callback => {
-    const dnd = await DungeonsAndDragons.deployed()
-    length = await dnd.getNumberOfCharacters()
+    const bnft = await BoskeNFT.deployed()
+    length = await bnft.getNumberOfCharacters()
     index = 0
     while (index < length) {
         console.log('Let\'s get the overview of your character ' + index + ' of ' + length)
         let characterMetadata = metadataTemple
-        let characterOverview = await dnd.characters(index)
+        let characterOverview = await bnft.characters(index)
         index++
         characterMetadata['name'] = characterOverview['name']
         if (fs.existsSync('metadata/' + characterMetadata['name'].toLowerCase().replace(/\s/g, '-') + '.json')) {
@@ -61,5 +61,5 @@ module.exports = async callback => {
         let data = JSON.stringify(characterMetadata)
         fs.writeFileSync(filename + '.json', data)
     }
-    callback(dnd)
+    callback(bnft)
 }

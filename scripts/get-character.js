@@ -1,9 +1,9 @@
-const DungeonsAndDragons = artifacts.require('DungeonsAndDragonsCharacter')
+const BoskeNFT = artifacts.require('BoskeNFT')
 
 module.exports = async callback => {
-    const dnd = await DungeonsAndDragons.deployed()
+    const bnft = await BoskeNFT.deployed()
     console.log('Let\'s get the overview of your character')
-    const overview = await dnd.characters(0)
+    const overview = await bnft.characters(0)
     console.log(overview)
     callback(overview.tx)
 }

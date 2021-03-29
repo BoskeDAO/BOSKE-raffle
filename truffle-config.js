@@ -1,5 +1,11 @@
-const HDWalletProvider = require('@truffle/hdwallet-provider')
+//require('dotenv').config();
+
+//const HDWalletProvider = require('@truffle/hdwallet-provider')
 // 0x5F3313814F7FB3E11C4a240141689BA9933c5607
+
+const HDWalletProvider = require('@truffle/hdwallet-provider')
+require('dotenv').config()
+
 module.exports = {
   networks: {
     rinkeby: {
