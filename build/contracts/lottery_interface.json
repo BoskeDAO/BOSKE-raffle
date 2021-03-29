@@ -1,48 +1,47 @@
 {
-  "contractName": "PointerInterface",
+  "contractName": "lottery_interface",
   "abi": [
     {
-      "inputs": [],
-      "name": "getAddress",
-      "outputs": [
+      "inputs": [
         {
-          "internalType": "address",
+          "internalType": "uint256",
           "name": "",
-          "type": "address"
+          "type": "uint256"
         }
       ],
-      "stateMutability": "view",
+      "name": "fulfill_random",
+      "outputs": [],
+      "stateMutability": "nonpayable",
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.6.6+commit.6c089d02\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"getAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"@chainlink/contracts/src/v0.6/interfaces/PointerInterface.sol\":\"PointerInterface\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@chainlink/contracts/src/v0.6/interfaces/PointerInterface.sol\":{\"keccak256\":\"0x6458d82762d4f13c020a13efdbd9bf14500e147df707184a693aea91449c2f4f\",\"urls\":[\"bzz-raw://735950f3a544fc6ef2db92405597169bfb5fdb9df83623c0d99fd3d85de8690d\",\"dweb:/ipfs/QmZHxb5Qr7Kw9DHAg4VwEADue9ffNyyhbiyEZ15A5mANUN\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.6.6+commit.6c089d02\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"fulfill_random\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/osboxes/BoskeDAO/BOSKE-raffle/contracts/interfaces/lottery_interface.sol\":\"lottery_interface\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/osboxes/BoskeDAO/BOSKE-raffle/contracts/interfaces/lottery_interface.sol\":{\"keccak256\":\"0x3a6ad7c78ffb520e67c6d74743de328b4a058ffd95c3afadd0a6c2a6d4ef9ebe\",\"urls\":[\"bzz-raw://b786906a296258d3ff356fc38aaaafb43626ccfe4fa67fc1b3473ef121881e27\",\"dweb:/ipfs/Qmba2gJYznRxdX6p5KepYLQYP6fmS18CeVRaxQbef6bVdN\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "immutableReferences": {},
   "sourceMap": "",
   "deployedSourceMap": "",
-  "source": "pragma solidity ^0.6.0;\n\ninterface PointerInterface {\n  function getAddress() external view returns (address);\n}\n",
-  "sourcePath": "@chainlink/contracts/src/v0.6/interfaces/PointerInterface.sol",
+  "source": "pragma solidity 0.6.6;\n\ninterface lottery_interface {\n    function fulfill_random(uint) external;\n}",
+  "sourcePath": "/home/osboxes/BoskeDAO/BOSKE-raffle/contracts/interfaces/lottery_interface.sol",
   "ast": {
-    "absolutePath": "@chainlink/contracts/src/v0.6/interfaces/PointerInterface.sol",
+    "absolutePath": "/home/osboxes/BoskeDAO/BOSKE-raffle/contracts/interfaces/lottery_interface.sol",
     "exportedSymbols": {
-      "PointerInterface": [
-        3516
+      "lottery_interface": [
+        536
       ]
     },
-    "id": 3517,
+    "id": 537,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 3510,
+        "id": 530,
         "literals": [
           "solidity",
-          "^",
           "0.6",
-          ".0"
+          ".6"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:18"
+        "src": "0:22:5"
       },
       {
         "abstract": false,
@@ -51,85 +50,84 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 3516,
+        "id": 536,
         "linearizedBaseContracts": [
-          3516
+          536
         ],
-        "name": "PointerInterface",
+        "name": "lottery_interface",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": null,
             "documentation": null,
-            "functionSelector": "38cc4831",
-            "id": 3515,
+            "functionSelector": "c251ebf2",
+            "id": 535,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
-            "name": "getAddress",
+            "name": "fulfill_random",
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 3511,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "75:2:18"
-            },
-            "returnParameters": {
-              "id": 3514,
+              "id": 533,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3513,
+                  "id": 532,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 3515,
-                  "src": "101:7:18",
+                  "scope": 535,
+                  "src": "82:4:5",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_address",
-                    "typeString": "address"
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 3512,
-                    "name": "address",
+                    "id": 531,
+                    "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "101:7:18",
-                    "stateMutability": "nonpayable",
+                    "src": "82:4:5",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_address",
-                      "typeString": "address"
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
                     }
                   },
                   "value": null,
                   "visibility": "internal"
                 }
               ],
-              "src": "100:9:18"
+              "src": "81:6:5"
             },
-            "scope": 3516,
-            "src": "56:54:18",
-            "stateMutability": "view",
+            "returnParameters": {
+              "id": 534,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "96:0:5"
+            },
+            "scope": 536,
+            "src": "58:39:5",
+            "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 3517,
-        "src": "25:87:18"
+        "scope": 537,
+        "src": "24:75:5"
       }
     ],
-    "src": "0:113:18"
+    "src": "0:99:5"
   },
   "legacyAST": {
     "attributes": {
-      "absolutePath": "@chainlink/contracts/src/v0.6/interfaces/PointerInterface.sol",
+      "absolutePath": "/home/osboxes/BoskeDAO/BOSKE-raffle/contracts/interfaces/lottery_interface.sol",
       "exportedSymbols": {
-        "PointerInterface": [
-          3516
+        "lottery_interface": [
+          536
         ]
       }
     },
@@ -138,14 +136,13 @@
         "attributes": {
           "literals": [
             "solidity",
-            "^",
             "0.6",
-            ".0"
+            ".6"
           ]
         },
-        "id": 3510,
+        "id": 530,
         "name": "PragmaDirective",
-        "src": "0:23:18"
+        "src": "0:22:5"
       },
       {
         "attributes": {
@@ -160,42 +157,31 @@
           "documentation": null,
           "fullyImplemented": false,
           "linearizedBaseContracts": [
-            3516
+            536
           ],
-          "name": "PointerInterface",
-          "scope": 3517
+          "name": "lottery_interface",
+          "scope": 537
         },
         "children": [
           {
             "attributes": {
               "body": null,
               "documentation": null,
-              "functionSelector": "38cc4831",
+              "functionSelector": "c251ebf2",
               "implemented": false,
               "isConstructor": false,
               "kind": "function",
               "modifiers": [
                 null
               ],
-              "name": "getAddress",
+              "name": "fulfill_random",
               "overrides": null,
-              "scope": 3516,
-              "stateMutability": "view",
+              "scope": 536,
+              "stateMutability": "nonpayable",
               "virtual": false,
               "visibility": "external"
             },
             "children": [
-              {
-                "attributes": {
-                  "parameters": [
-                    null
-                  ]
-                },
-                "children": [],
-                "id": 3511,
-                "name": "ParameterList",
-                "src": "75:2:18"
-              },
               {
                 "children": [
                   {
@@ -204,48 +190,58 @@
                       "mutability": "mutable",
                       "name": "",
                       "overrides": null,
-                      "scope": 3515,
+                      "scope": 535,
                       "stateVariable": false,
                       "storageLocation": "default",
-                      "type": "address",
+                      "type": "uint256",
                       "value": null,
                       "visibility": "internal"
                     },
                     "children": [
                       {
                         "attributes": {
-                          "name": "address",
-                          "stateMutability": "nonpayable",
-                          "type": "address"
+                          "name": "uint",
+                          "type": "uint256"
                         },
-                        "id": 3512,
+                        "id": 531,
                         "name": "ElementaryTypeName",
-                        "src": "101:7:18"
+                        "src": "82:4:5"
                       }
                     ],
-                    "id": 3513,
+                    "id": 532,
                     "name": "VariableDeclaration",
-                    "src": "101:7:18"
+                    "src": "82:4:5"
                   }
                 ],
-                "id": 3514,
+                "id": 533,
                 "name": "ParameterList",
-                "src": "100:9:18"
+                "src": "81:6:5"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 534,
+                "name": "ParameterList",
+                "src": "96:0:5"
               }
             ],
-            "id": 3515,
+            "id": 535,
             "name": "FunctionDefinition",
-            "src": "56:54:18"
+            "src": "58:39:5"
           }
         ],
-        "id": 3516,
+        "id": 536,
         "name": "ContractDefinition",
-        "src": "25:87:18"
+        "src": "24:75:5"
       }
     ],
-    "id": 3517,
+    "id": 537,
     "name": "SourceUnit",
-    "src": "0:113:18"
+    "src": "0:99:5"
   },
   "compiler": {
     "name": "solc",
@@ -253,7 +249,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-03-29T18:54:03.843Z",
+  "updatedAt": "2021-03-29T18:54:03.504Z",
   "devdoc": {
     "methods": {}
   },
